@@ -1,0 +1,524 @@
+
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa|PT+Mono');
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+p{
+   /* font-family: "PT Mono", monospace; */
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: bold;
+  font-size: 1.0em;
+  line-height: 1.66667em;
+  color:white;
+}
+
+
+.logo_name{
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: bold;
+    font-size: 1.6em;
+    line-height: 1.66667em;
+    color:white;
+}
+.menu{
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.66667em;
+}
+
+
+
+header img{
+    width: 8%;
+    height: 8%;
+    margin-right: 3%;
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.4);  
+}
+
+@media (max-width: 576px) { 
+    header img{
+        width: 20%;
+        height: 20%; 
+ }
+
+}
+
+
+
+
+.whattsap{
+ background-color: rgba(0, 0, 0, 0) ;
+ margin-left: 93%;
+ height: 200px;
+ color: lime; 
+ padding: 20px; 
+ cursor: pointer; 
+ position: fixed;
+ z-index: 2;
+ }
+
+
+ .whattsap:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+     }
+
+
+ .whattsap a{
+   text-decoration: none;
+   font-family: 'Open Sans', sans-serif;  
+  font-weight: bold;
+  font-size: 1.0em;
+  line-height: 1.66667em;
+  color:white;
+ }
+
+
+.bi-whatsapp{
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.7);
+    border-radius: 40%; 
+    background-color: green;
+    color: white;
+    padding: 1px;
+    margin-top: 10px;
+   }
+ 
+  
+@media (max-width: 576px) { 
+    .whattsap{
+        margin-left: 83%;
+        height: 200px;       
+       }
+
+}
+
+
+
+.intru{
+    width: auto;
+    height: 200px;
+    background-color: rgba(255, 255, 223, 0.7);
+    background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+
+.intru p{
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: bold;
+    font-size: 1.6em;
+    line-height: 1.66667em;
+    color:red;
+}
+
+
+
+
+
+
+[data-anime]{
+    opacity: 0;
+    transition: .3s;
+
+}
+
+
+[data-anime="left"]{
+  transform: translate3d(150px, 0, 0);
+}
+
+[data-anime="right"]{
+    transform: translate3d(-150px, 0, 0);
+  }
+
+
+[data-anime].animate{
+   opacity: 1;
+   transform: translate3d(0, 0, 0);
+}
+
+
+
+
+
+
+.carousel-inner{
+    width: 100%;
+    height: 700px;
+    padding: 10% 5% 10% 10%;
+    background-color: rgba(223, 10, 18, 0.8);
+    background-image: linear-gradient(to bottom, transparent, rgba(193, 130, 18, .9));
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);  
+    
+}
+
+.carousel-item img{
+     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+     border-radius: 15px;
+     border: 0;
+}
+
+
+.carroucel img{
+    width: 95%;
+    height: 400px;
+    
+}
+
+.carroucel p{
+    color: aliceblue; 
+    text-align: center;   
+}
+
+
+@media (max-width: 576px) { 
+    .carousel-inner{      
+        height: 600px;       
+       }
+
+}
+
+
+
+
+
+
+
+
+
+.fotter-contatos{
+    width: auto;
+    height: 280px;
+    background-color: rgba(150, 0, 18, 0.7) ;
+    background-image: linear-gradient(to top, transparent, rgba(153, 0, 18, 0.8));
+    padding: 10%;
+     }
+
+.fotter-contatos ul{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.fotter-contatos li{
+    list-style: none; 
+    font-size: 1.2em;
+	color: rgba(255, 255, 255, .20);
+	font-weight: 700;
+    padding: 5px;
+}
+
+.fotter-contatos li:hover{
+    -webkit-transform: scale(1.2);
+	transform: scale(1.2);
+    color: rgba(255, 255, 255, 0.404);
+    
+}
+
+
+.bi-instagram{
+    background-color: rgba(20, 20, 118, 0.7) ;
+    background-image: linear-gradient(to bottom, transparent, rgba(123, 41, 118, 0.8));
+	color: white;
+    padding: 2px;
+    margin-top: 10px;
+   
+}
+
+.bi-instagram:hover{
+   	color: yellow;
+}
+
+
+
+
+.bi-envelope-open{
+    color: rgba(255, 255, 255, .20);
+	color: white;
+    padding: 2px;
+    margin-top: 10px;
+     
+}
+
+.bi-envelope-open:hover{
+   	color: yellow;
+}
+
+.bi-telephone{
+    color: rgba(255, 255, 255, .20);
+	color: white;
+    padding: 2px;
+    margin-top: 10px;
+     
+}
+
+.bi-telephone:hover{  
+	color: yellow;
+}
+
+
+.developer{
+ display: flex;
+ justify-content: center;
+ margin-top: 60px;
+}
+.developer p{
+    font-size: 1.0em;
+	color: rgba(255, 255, 255, .20);
+	font-weight: 700;
+}
+
+
+
+@media (max-width: 576px) {
+
+    .fotter-contatos{      
+        height: 280px;
+         }
+
+    .fotter-contatos ul{
+        flex-wrap: wrap;
+        justify-content: space-around;
+       }
+       .fotter-contatos li{
+        margin-top: 5%;
+       }
+
+      
+
+}
+
+
+
+
+
+
+
+
+
+.secao-main{
+    width: auto;
+    height: 900px;
+    background-color: rgba(223, 10, 18, 0.8);
+    background-image: linear-gradient(to bottom, transparent, rgba(193, 130, 18, .9));
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+   /* display: flex;
+    justify-content: space-around;
+    padding: 5%;*/
+   
+    position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 20px 0;
+}
+
+
+
+.card {
+	position: relative;
+	height: 350px;
+	background-color: rgba(255, 255, 223, 0.7);
+    background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
+	box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+	display: flex;
+	width: 45%;
+	margin: 30px;
+	padding: 20px;
+}
+
+
+.box-img img{
+   width: 100%;
+   height: 99%;
+
+}
+
+
+
+.card .box-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+
+.card:hover .box-img {
+	width: 150px;
+	height: 150px;
+	left: -25px;
+	top: calc(50% -75px);
+	transition: 0.5s ease-in-out;
+	background-color: rgba(16, 123, 17, 0.9);
+}
+
+.card .box-img:before {
+	content: attr(data-text);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 6em;
+	color: rgba(255, 255, 255, .20);
+	font-weight: 700;
+}
+
+.card:hover .box-img:before {
+    font-size: 2em;
+    font-weight: 250;
+    font-weight: 800;       
+}
+
+
+
+.card .content {
+	position: absolute;
+	right: 0;
+	width: calc(100% - 85px);
+	height: 100%;
+	padding: 20px 20px 20px 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.card .content h3 {
+	margin-left: 10%;
+	width:100%;
+	margin-bottom: 5px;
+	font-size: 24px;
+	color: red;	
+	display: flex;
+}
+
+
+.card .content p {
+	text-align: justify;
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: bold;
+    font-size: 1.0em;
+    line-height: 1.66667em;
+    color:black;
+}
+
+
+
+
+@media (max-width: 576px) { 
+    
+    .secao-main{
+          height: 1200px;        
+    }
+    .card {
+        height: 350px;
+        width: 95%;
+     }
+
+     .card:hover .box-img:before {
+        font-size: 2em;
+        font-weight: 250;
+        font-weight: 800;       
+    }
+
+
+}
+
+
+
+
+
+
+
+
+.box-video img{
+    width: 100%;
+    height: 99%; 
+ }
+
+ .card .box-video {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.descricao {
+	position: relative;
+	height: 300px;
+    width: 70%;
+	background-color: rgba(255, 255, 223, 0.7);
+    background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
+	box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+	display: flex;
+	margin-left: 16%;
+	padding: 20px;
+}
+
+.descricao p{
+  font-family: 'Open Sans', sans-serif;  
+  font-weight: bold;
+  font-size: 1.0em;
+  line-height: 1.66667em;
+  color:black;
+}
+
+@media (max-width: 576px) { 
+    
+    .descricao {
+        width: 88%;
+        margin-left: 6%;
+    }  
+
+
+}
+
+
+
+.secao-sobre{
+    width: auto;
+    height: 700px;
+    background-color: rgba(255, 255, 223, 0.7);
+    background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
+   
+	flex-wrap: wrap;
+	margin: 20px 0;
+    padding: 10px;
+}
+
+.secao-sobre p{
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: bold;
+    font-size: 1.0em;
+    line-height: 1.66667em;
+    color:red;
+}
+
+
+
+
+
+

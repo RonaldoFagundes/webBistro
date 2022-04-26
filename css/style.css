@@ -10,6 +10,8 @@
 }
 
 
+
+
 p{
    /* font-family: "PT Mono", monospace; */
   font-family: 'Open Sans', sans-serif;  
@@ -20,18 +22,25 @@ p{
 }
 
 
+
+
+
+
+
+
 .logo_name{
     font-family: 'Open Sans', sans-serif;  
     font-weight: bold;
     font-size: 1.6em;
     line-height: 1.66667em;
-    color:white;
+    color:red;
 }
 .menu{
     font-family: 'Open Sans', sans-serif;  
     font-weight: bold;
     font-size: 1.2em;
     line-height: 1.66667em;
+	color:#8B4513;
 }
 
 
@@ -42,6 +51,11 @@ header img{
     margin-right: 3%;
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.4);  
 }
+
+.navbar-toggler {
+    background-color: rgba(150,128,84, 0.9)	;
+}
+
 
 @media (max-width: 576px) { 
     header img{
@@ -55,14 +69,15 @@ header img{
 
 
 .whattsap{
- background-color: rgba(0, 0, 0, 0) ;
- margin-left: 93%;
- height: 200px;
+ background-color: rgba(0, 0, 0, 0.7)  ;
+ margin-left: 92%;
+ height: 180px;
  color: lime; 
- padding: 20px; 
+ padding: 30px 15px 5px 15px; 
  cursor: pointer; 
  position: fixed;
  z-index: 2;
+ border-radius:50px;
  }
 
 
@@ -78,7 +93,7 @@ header img{
   font-weight: bold;
   font-size: 1.0em;
   line-height: 1.66667em;
-  color:white;
+  color:	white;
  }
 
 
@@ -102,11 +117,69 @@ header img{
 
 
 
+
+
+
+
+
+
+.carousel-inner{
+    width: 100%;
+    height: 500px;
+    /*padding: 10% 5% 10% 10%; */	
+    background-color: rgba(255, 255, 223, 0.7);
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);  
+    margin-top:30px;
+}
+
+.carousel-item img{
+     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+     border-radius: 15px;
+     border: 0;
+}
+
+
+.carroucel img{
+    width: 100%;
+    height: 500px;
+    
+}
+
+.carroucel p{
+    color: aliceblue; 
+    text-align: center;   
+}
+
+
+@media (max-width: 576px) { 
+    .carousel-inner{      
+        height: 500px;
+        margin-top:70px;		
+       }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .intru{
     width: auto;
-    height: 200px;
+    height: 300px;
+	 /*
+        rgba(255,127,80, 0.7)
+        rgba(250,128,84, 0.9)		   
+	   */
     background-color: rgba(255, 255, 223, 0.7);
     background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
+	box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7); 
     display: flex;
     justify-content: space-around; 
     align-items: center; 
@@ -134,7 +207,7 @@ header img{
 
 
 [data-anime="left"]{
-  transform: translate3d(150px, 0, 0);
+  transform: translate3d(170px, 0, 0);
 }
 
 [data-anime="right"]{
@@ -152,56 +225,17 @@ header img{
 
 
 
-.carousel-inner{
-    width: 100%;
-    height: 700px;
-    padding: 10% 5% 10% 10%;
-    background-color: rgba(223, 10, 18, 0.8);
-    background-image: linear-gradient(to bottom, transparent, rgba(193, 130, 18, .9));
-    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);  
-    
-}
-
-.carousel-item img{
-     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
-     border-radius: 15px;
-     border: 0;
-}
-
-
-.carroucel img{
-    width: 95%;
-    height: 400px;
-    
-}
-
-.carroucel p{
-    color: aliceblue; 
-    text-align: center;   
-}
-
-
-@media (max-width: 576px) { 
-    .carousel-inner{      
-        height: 600px;       
-       }
-
-}
-
-
-
-
-
 
 
 
 
 .fotter-contatos{
     width: auto;
-    height: 280px;
-    background-color: rgba(150, 0, 18, 0.7) ;
-    background-image: linear-gradient(to top, transparent, rgba(153, 0, 18, 0.8));
-    padding: 10%;
+    height: 230px;
+    background-color: rgba(39,69,19, 0.7) ;
+    background-image: linear-gradient(to top, transparent, rgba(139,60, 18, 0.8));
+	box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7); 
+    padding: 7%;
      }
 
 .fotter-contatos ul{
@@ -309,9 +343,12 @@ header img{
 
 .secao-main{
     width: auto;
-    height: 900px;
-    background-color: rgba(223, 10, 18, 0.8);
+    height: 1500px;
+	
+    background-color: rgba(255, 210, 18, 0.3);
     background-image: linear-gradient(to bottom, transparent, rgba(193, 130, 18, .9));
+	
+	
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
    /* display: flex;
     justify-content: space-around;
@@ -322,6 +359,7 @@ header img{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin: 20px 0;
+	/*margin-top:30px;*/
 }
 
 
@@ -428,8 +466,9 @@ header img{
 @media (max-width: 576px) { 
     
     .secao-main{
-          height: 1200px;        
-    }
+          height: 2400px;
+          margin-top:70px;		  
+          }
     .card {
         height: 350px;
         width: 95%;
@@ -440,6 +479,9 @@ header img{
         font-weight: 250;
         font-weight: 800;       
     }
+	.card iframe{
+		width:386px;
+	}
 
 
 }
@@ -500,13 +542,13 @@ header img{
 
 .secao-sobre{
     width: auto;
-    height: 700px;
+    height: 800px;
     background-color: rgba(255, 255, 223, 0.7);
     background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
    
 	flex-wrap: wrap;
 	margin: 20px 0;
-    padding: 10px;
+    padding: 50px;
 }
 
 .secao-sobre p{

@@ -1,4 +1,15 @@
 
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll",()=>{
+	if(window.pageYOffset>200){
+		toTop.classList.add("active");
+	}else{
+		toTop.classList.remove("active");
+	}
+	
+});
+
 
 
 const debounce  = function (func,wait,immediate){
@@ -29,7 +40,7 @@ const animationClass = 'animate';
 
 
 
-function animeScroll(){
+ animeScroll=()=>{
 
      const windowTop = window.pageYOffset +((window.innerHeight*3/4));
 

@@ -1,9 +1,15 @@
 # webBistro
-website frontend - html - css - bootstrap - javascript &nbsp;
+website frontend - html - css - bootstrap - javascript
+
+&nbsp;
 site:point_right:
 [webBistro](https://ronaldofagundes.github.io/webBistro/)
+
+
    &nbsp;
-   Design :
+   
+   
+  ## Design :
    &nbsp;
  - responsivo
  - carrocel

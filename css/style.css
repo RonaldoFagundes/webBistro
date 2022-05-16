@@ -739,8 +739,9 @@ header img {
     }
 
     .history {
-        height: 1000px;
-        width: 100%;
+        margin-left:-32px;
+        height: 800px;
+        width: 340px;
     }
 
     .history p {

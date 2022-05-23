@@ -8,9 +8,9 @@
     padding: 0;
 }
 
-
-
-
+html {
+    scroll-behavior: smooth;
+}
 
 
 .logo_name {
@@ -89,12 +89,11 @@ header img {
     margin-left: 92%;
     height: 180px;
     color: lime;
-    padding: 30px 15px 5px 15px;
+    padding: 30px 15px 15px 15px;
     cursor: pointer;
     position: fixed;
     z-index: 2;
     border-radius: 50px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,6 +115,9 @@ header img {
     color: white;
 }
 
+.pedido .bi {
+    margin-left: 15%;
+}
 
 
 
@@ -147,7 +149,6 @@ header img {
     color: #1f1f1f;
     text-decoration: none;
     z-index: 2;
-
     opacity: 0;
     pointer-events: none;
     transition: all .4s;
@@ -165,9 +166,10 @@ header img {
 
 
 
+
 .intru {
     width: auto;
-    height: 150px;
+    height: 150px;    
     text-align: center;
     padding: 5px 0px;
     margin: 5px 0px;
@@ -176,6 +178,7 @@ header img {
 
 
 .intru p {
+    /*font-family: 'Open Sans', sans-serif;*/
     font-family: "Orelega One", sans-serif;
     font-weight: bold;
     font-size: 1.6em;
@@ -200,6 +203,7 @@ header img {
 }
 
 
+
 .carroucel img {
     width: 100%;
     height: 500px;
@@ -220,24 +224,14 @@ header img {
 
 
 
-
-
-
-
-
-
-
-
 .containner-produto {
     width: auto;
     height: 430px;
     background-color: rgba(255, 255, 223, 0.7);
     background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
-
     display: flex;
     justify-content: space-around;
-
 }
 
 
@@ -292,22 +286,17 @@ header img {
 
 
 @media (max-width: 576px) {
-
     .containner-produto {
         display: block;
         height: 1320px;
-
-
     }
-
     .containner-produto .box-img img {
         width: 100%;
     }
-
     .containner-produto .card {
         width: 70%;
         height: 300px;
-        margin: 0 0 5% 14%;        
+        margin: 0 0 5% 14%;      
     }
 
 }
@@ -316,15 +305,9 @@ header img {
 
 
 
-
-
-
-
-
 [data-anime] {
     opacity: 0;
     transition: .3s;
-
 }
 
 
@@ -353,11 +336,7 @@ header img {
         transform: translate3d(-15px, 0, 0);
     }
 
-
 }
-
-
-
 
 
 
@@ -368,7 +347,7 @@ header img {
     background-image: linear-gradient(to top, transparent, rgba(139, 60, 18, 0.8));
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
     display: flex-wrap;
-   }
+}
 
 .fotter-contatos ul {
     display: flex;
@@ -414,7 +393,6 @@ header img {
     color: white;
     padding: 2px;
     margin-top: 10px;
-
 }
 
 .bi-envelope-open:hover {
@@ -480,18 +458,15 @@ header img {
     .fotter-contatos {
         height: 180px;
     }
-
     .fotter-contatos ul {
         padding: 0px;
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center;
     }
-
     .developer {
         margin-top: 15%;
     }
-
     .developer p {
         font-size: 0.8em;
     }
@@ -500,24 +475,16 @@ header img {
 
 
 
-
-
-
-
-
 .secao-main {
     width: auto;
     height: auto;
-
     background-color: rgba(255, 210, 18, 0.3);
     background-image: linear-gradient(to bottom, transparent, rgba(193, 130, 18, .9));
-
-
-    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);    
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);   
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 5px 0px;    
+    margin: 5px 0px;  
 }
 
 
@@ -540,7 +507,6 @@ header img {
 .box-img img {
     width: 100%;
     height: 100%;
-
 }
 
 
@@ -627,19 +593,15 @@ header img {
 
 
 @media (max-width: 576px) {
-
-
     .card {
         height: 350px;
         width: 95%;
     }
-
     .card:hover .box-img:before {
         font-size: 2em;
         font-weight: 250;
         font-weight: 800;
     }
-
 }
 
 
@@ -684,13 +646,10 @@ header img {
 }
 
 @media (max-width: 576px) {
-
     .descricao {
         width: 85%;
         margin-left: 7%;
     }
-
-
 }
 
 
@@ -715,11 +674,10 @@ header img {
 
 
 .history {
-    width: 98%;
+    width: 100%;
     height: 600px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.4);
-
 }
 
 .history p {
@@ -737,23 +695,15 @@ header img {
         background: url("../img/fundo_sobre_sm.png") no-repeat center center;
         background-size: cover;
     }
-
     .history {
-        margin-left:-32px;
+        margin-left: -40px;
         height: 800px;
         width: 340px;
     }
-
     .history p {
         font-size: 1.1em;
     }
 }
-
-
-
-
-
-
 
 
 
@@ -789,6 +739,8 @@ header img {
 .secao-preco table img {
     width: 80px;
     height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .secao-preco table {
@@ -835,11 +787,12 @@ td {
 
 @media (max-width: 576px) {
     .secao-preco table img {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
 
     .secao-preco table th {
         font-size: 1.4em;
     }
+
 }

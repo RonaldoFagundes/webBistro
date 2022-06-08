@@ -237,8 +237,8 @@ header img {
 
 
 .containner-produto .box-img img {
-    width: auto;
-    height: 100%;
+    width: 300px;
+    height: 370px;
 }
 
 
@@ -250,9 +250,8 @@ header img {
 }
 
 .containner-produto .card {
-    width: 400px;
-    height: 310px;
-
+    width: 100%;
+    height: auto;
 }
 
 
@@ -291,12 +290,12 @@ header img {
         height: 1320px;
     }
     .containner-produto .box-img img {
-        width: 100%;
+        width:360px;
+        height:298px;
     }
     .containner-produto .card {
-        width: 70%;
-        height: 300px;
-        margin: 0 0 5% 14%;      
+        width:85%;
+        height:300px;         
     }
 
 }

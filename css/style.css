@@ -707,8 +707,7 @@ header img {
     }
     .history {
         height: 800px;
-        width: 80%;
-    }
+     }
     .history p {
         font-size: 1.1em;
     }
@@ -722,7 +721,7 @@ header img {
 .secao-preco {
     min-width: 320px;
     max-width: auto;
-    background: url("../img/fundo_preco_bg.png") no-repeat center center;
+    background: url("../img/preco_fundo_lg.png") no-repeat center center;
     background-size: cover;
     flex-wrap: wrap;
     margin: 1% 0px;
@@ -738,7 +737,7 @@ header img {
 
 @media (max-width: 600px) {
     .secao-preco {
-        background: url("../img/fundo_preco_sm.png") no-repeat center center;
+        background: url("../img/preco_fundo_sm.png") no-repeat center center;
         background-size: cover;
         height: auto;
         padding: 0;

@@ -668,7 +668,7 @@ header img {
 .secao-sobre {
     min-width: 320px;
     max-width: auto;
-    background: url("../img/fundo_sobre_bg.png") no-repeat center center;
+    background: url("../img/sobre_bkgr_bg.png") no-repeat center center;
     background-size: cover;
     flex-wrap: wrap;
     margin: 1% 0px;
@@ -701,7 +701,7 @@ header img {
 @media (max-width: 600px) {
     .secao-sobre {
         width: auto;
-        background: url("../img/fundo_sobre_sm.png") no-repeat center center;
+        background: url("../img/sobre_bkgr_sm.png") no-repeat center center;
         background-size: cover;
         padding: 10px;
     }
@@ -721,7 +721,7 @@ header img {
 .secao-preco {
     min-width: 320px;
     max-width: auto;
-    background: url("../img/preco_fundo_lg.png") no-repeat center center;
+    background: url("../img/pr_bkgr_lg.png") no-repeat center center;
     background-size: cover;
     flex-wrap: wrap;
     margin: 1% 0px;
@@ -737,7 +737,7 @@ header img {
 
 @media (max-width: 600px) {
     .secao-preco {
-        background: url("../img/preco_fundo_sm.png") no-repeat center center;
+        background: url("../img/pr_bkgr_sm.png") no-repeat center center;
         background-size: cover;
         height: auto;
         padding: 0;

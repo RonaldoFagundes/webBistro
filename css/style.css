@@ -540,7 +540,7 @@ header img {
     left: -25px;
     top: calc(50% -75px);
     transition: 0.5s ease-in-out;
-    background-color: rgba(16, 123, 17, 0.9);
+    background-color: rgba(255, 255, 223, 0.7);
 }
 
 .card .box-img:before {
@@ -563,7 +563,10 @@ header img {
     font-weight: 800;
 }
 
-
+.card:hover .box-img img {
+    width: 200px;
+    height: 170px;
+}
 
 .card .content {
     width: 100%;
@@ -600,7 +603,7 @@ header img {
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
     .card {
         height: 350px;
         width: 95%;
@@ -609,6 +612,13 @@ header img {
         font-size: 2em;
         font-weight: 250;
         font-weight: 800;
+     }
+    .box-img img {
+        width: 400px;       
+    }
+    .card:hover .box-img img {
+        width: 100%;
+        height: 60%;
     }
 }
 

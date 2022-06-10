@@ -252,24 +252,24 @@ header img {
     background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;    
 }
 
 .containner-produto .box-img img {
     width: 300px;
-    height: 370px;
+    height: 370px;    
 }
 
 .containner-produto .card .box-img:before {
     font-size: 2em;
-    font-weight: 700;
-    color: rgba(250, 255, 0, .40);
-    font-weight: 800;
-}
+    font-weight: 700;  
+    color: rgba(247, 239, 131, 0.8);
+    font-weight: 800;  
+   }
 
 .containner-produto .card {
     width: 100%;
-    height: auto;
+    height: auto;    
 }
 
 .containner-produto .card .content {
@@ -279,7 +279,7 @@ header img {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 135px;
+    margin-top: 135px;   
 }
 
 .containner-produto .card .content p {
@@ -517,8 +517,8 @@ header img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: #333;
+    height: 100%;  
+    background: rgba(255, 255, 223, 0.6);
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -707,7 +707,7 @@ header img {
     }
     .history {
         height: 800px;
-        width: 340px;
+        width: 80%;
     }
     .history p {
         font-size: 1.1em;

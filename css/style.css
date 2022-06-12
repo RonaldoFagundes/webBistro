@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa|PT+Mono');
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
 
 * {
     margin: 0;
@@ -12,6 +15,9 @@ html {
     scroll-behavior: smooth;
 }
 
+h1,h2,h3,p{
+    text-transform: capitalize;
+}
 
 .logo_name {
     font-family: 'Open Sans', sans-serif;
@@ -197,8 +203,9 @@ header img {
 
 
 .intru p {
-    /*font-family: 'Open Sans', sans-serif;*/
-    font-family: "Orelega One", sans-serif;
+    /*font-family: 'Open Sans', sans-serif;
+    font-family: "Orelega One", sans-serif;*/
+    font-family: 'Lobster', cursive;
     font-weight: bold;
     font-size: 1.6em;
     line-height: 1.66667em;
@@ -261,11 +268,17 @@ header img {
 }
 
 .containner-produto .card .box-img:before {
-    font-size: 2em;
-    font-weight: 700;  
-    color: rgba(247, 239, 131, 0.8);
-    font-weight: 800;  
+    font-size: 2.2rem;
+    font-weight: 700;     
+    color: rgba(155, 05, 10, 0.8);
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    text-transform: capitalize; 
    }
+
+  
+
+
 
 .containner-produto .card {
     width: 100%;
@@ -282,19 +295,34 @@ header img {
     margin-top: 135px;   
 }
 
+
+
+
 .containner-produto .card .content p {
-    font-family: 'Open Sans', sans-serif;
+    width: 250px;
+    height: 170px;   
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+   /* font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Lobster', cursive;
     font-weight: bold;
-    font-size: 0.8em;
-    line-height: 1.8em;
-    color: #570000;
+    font-size: 1.4rem;   
+    color: rgb(138, 6, 13);    
 }
 
+
+
+
 .containner-produto .card .content h3 {
-    padding: 0px;
-    font-size: 1.4rem;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 5px;   
+  /*  font-family: "Orelega One", sans-serif;*/
+    font-family: 'Lobster', cursive;
     font-weight: bold;
-    font-family: "Orelega One", sans-serif;
+    font-size: 1.5rem;
+    color: rgb(255, 0, 0);    
 }
 
 
@@ -543,8 +571,9 @@ header img {
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 4em;
-    color: rgba(255, 255, 200, .60);
+    font-size: 4rem;
+    color: rgba(255, 255, 10, .60);
+    font-family: 'Lobster', cursive;
     font-weight: 700;
 }
 
@@ -570,26 +599,71 @@ header img {
 }
 
 .card .content h3 {
-    margin-left: 10%;
     width: 100%;
+    margin-left: 15%;
     margin-bottom: 5px;
-    font-size: 24px;
-    color: red;
     display: flex;
+
+    font-size: 1.6em;
+    font-family: 'Lobster', cursive;
+    color: rgb(138, 6, 13);
+    font-weight: bold;
 }
 
+
+
 .card .content p {
+    width: 70%;
+    margin-left: 20%;
+
+    
     text-align: justify;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em; 
+   /* font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Lobster', cursive;
+    color: rgb(255, 0, 0);
     font-weight: bold;
-    font-size: 1.0em;
     line-height: 1.66667em;
-    color: black;
+    
 }
+
+
 
 .card iframe {
     width: 100%;
 }
+
+
+/* 
+.containner-produto .card .content p {
+    width: 250px;
+    height: 170px;   
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+   / font-family: 'Open Sans', sans-serif;/
+    font-family: 'Lobster', cursive;
+   font-weight: bold;
+   font-size: 1.4rem;   
+   color: rgb(138, 6, 13);    
+}
+
+
+
+
+.containner-produto .card .content h3 {
+   width: 150px;
+   height: 30px;
+   margin-bottom: 5px;   
+ /  font-family: "Orelega One", sans-serif;/
+   font-family: 'Lobster', cursive;
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: rgb(255, 0, 0);    
+}
+
+*/
+
 
 
 
@@ -639,15 +713,17 @@ header img {
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
     display: flex;
     margin-left: 14%;
-    padding: 20px;
+    padding: 50px;
 }
 
 .descricao p {
-    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    font-size: 1.4em; 
+   /* font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Lobster', cursive;
+    color: rgb(255, 0, 0);
     font-weight: bold;
-    font-size: 1.0em;
     line-height: 1.66667em;
-    color: black;
 }
 
 

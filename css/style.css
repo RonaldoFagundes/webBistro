@@ -328,8 +328,9 @@ header img {
         height: 1320px;
         padding: 5px;
     }
+      /* img cards */ 
     .containner-produto .box-img img {
-        width:360px;
+        width:375px;
         height:298px;
     }
     .containner-produto .card {
@@ -687,19 +688,21 @@ header img {
         justify-content: center;
         align-items: center;
        }
+
+      /* img cards */ 
     .card .box-img {      
-        width: 350px;
+        width: 375px;
     }
 
     .card .content h3 {  
-        width: 300px;     
-        margin-top: 15%;   
+        width: 310px;     
+        margin-top: 17%;   
         margin-left: 6%;   
      }
        
     
     .card .content p { 
-        width: 300px;      
+        width: 310px;      
         font-size: 1.0em;        
     }
 
@@ -797,7 +800,7 @@ header img {
 
 .history {
     width: 100%;
-    height: 450px;
+    height: 580px;
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -822,7 +825,7 @@ header img {
         padding: 10px;
     }
     .history {
-        height: 850px;
+        height: 1100px;
      }
     .history p {
         font-size: 1.1em;

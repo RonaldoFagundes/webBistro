@@ -399,8 +399,8 @@ header img {
 .containner-produto .card-home .content p {
     width: 220px;
     height: 170px;
-    margin: 0;
-    padding: 40px 0px 0px 0px;
+    margin: 0%;
+    padding: 20px 0px 0px 0px;
     text-align: center;
     /* font-family: 'Open Sans', sans-serif;*/
     font-family: 'Lobster', cursive;
@@ -423,9 +423,10 @@ header img {
         width: 380px;
         height: 320px;
     }
+    
     .containner-produto .card-home .content p {
-        width: 270px;
-        height: 180px;
+        width: 330px;
+        height: 180px;               
     }
 }
 
@@ -636,13 +637,14 @@ header img {
 .secao-main .card .content h3 {
     width: 350px;
     height: 10%;
-    margin-left: 25%;
-    margin-bottom: 20%;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-bottom: 15%;
     font-family: 'Lobster', cursive;
     font-weight: bold;
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     color: rgb(49, 10, 10);
-}
+    }
 
 .secao-main .card .content p {
     width: 100%;
@@ -650,7 +652,7 @@ header img {
     margin-bottom: 5px;
     font-family: 'Lobster', cursive;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: rgb(255, 0, 0);
 }
 
@@ -667,9 +669,9 @@ header img {
         padding: 20px;
     }
     .descricao {
-        width: 93%;
+        width: 96%;
         height: 330px;
-        margin-left: 3%;
+        margin-left: 0%;
         padding: 20px 15px 15px 15px;
     }
     .secao-main .card {
@@ -687,15 +689,15 @@ header img {
     .secao-main .card .content h3 {
         width: 70%;
         margin-top: 20%;
-        margin-left: 35%;
+        margin-left: 40%;
+        margin-bottom: 20%;
         font-size: 1.8rem;
     }
 
-    .secao-main .card .content p {
-        width: 100%;
-        margin-top: 10%;
+    .secao-main .card .content p {      
         margin-left: 2%;
-        font-size: 1.4rem;
+        margin-bottom: 5px;
+        font-size: 1.4rem;     
     }
 
 }
@@ -942,11 +944,11 @@ td {
         margin-top: 15px;
     }
     .containner-produto .card-home .content p {
-        width: 150px;
+        width: 160px;
         height: 160px;
-        margin-top: 30px;
+        margin-top: 10px;
         margin-left: 120px;
-        font-size: 1.2rem;  
+        font-size: 1.1rem;  
    }
 
   
@@ -975,10 +977,10 @@ td {
         height: 400px;
     }
     .secao-main .card .content h3 {
-        width: 140px;
+        width: 180px;
         height: 30px;
         margin-top: 60px;
-        margin-left: 150px ;
+        margin-left: 130px ;
         font-size: 1.3rem;      
     }
     .secao-main .card .content p {

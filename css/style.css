@@ -744,7 +744,7 @@ header img {
     font-weight: bold;
     font-size: 1.4em;
     line-height: 1.66667em;
-    color: rgba(221, 240, 210, 0.9);
+    color: rgba(221, 240, 210, 1.0);
 }
 
 
@@ -831,7 +831,7 @@ td {
 
 
 
-@media (min-width: 380px) and (max-width: 700px) {
+@media (min-width: 400px) and (max-width: 700px) {
     .secao-preco {
         background: url("../img/pr_bkgr_sm.png") no-repeat center center;
         background-size: cover;
@@ -874,9 +874,8 @@ td {
 
 
 
-/* mobilie até 379px */
-@media (max-width: 379px) {
-
+/* mobilie até 379px 
+@media (max-width: 300px) {
 
     header img {
         width: 20%;
@@ -893,13 +892,11 @@ td {
         margin: 0px;
     }
 
-
     .pedido {
         margin-left: 75%;
         width: 100px;
+        background-color: #1f1f1f;
     }
-
-
 
     .fotter-contatos {
         height: 210px;        
@@ -916,10 +913,6 @@ td {
     .developer p {
         font-size: 0.8rem;
     }
-
-
-
-
 
     .carousel-inner {       
         height: 300px;       
@@ -951,13 +944,7 @@ td {
         font-size: 1.1rem;  
    }
 
-  
-
-
-
-
-
-    .secao-main {
+   .secao-main {
         display: block;
         height: auto;
         padding: 20px 0px 20px 0px;        
@@ -991,9 +978,6 @@ td {
         font-size: 1.2rem;       
     }
 
-
-
-
     [data-anime="left"] {
         transform: translate3d(10px, 0, 0);
     }
@@ -1001,7 +985,6 @@ td {
     [data-anime="right"] {
         transform: translate3d(-10px, 0, 0);
     }
-
 
     .secao-preco {
         background: url("../img/pr_bkgr_sm.png") no-repeat center center;
@@ -1017,9 +1000,6 @@ td {
         font-size: 1.8rem;
     }
 
-
-    
-
     .secao-sobre {
         width: auto;
         background: url("../img/sobre_bkgr_sm.png") no-repeat center center;
@@ -1031,9 +1011,162 @@ td {
     }
     .history p {
         font-size: 1.0em;
-    }
-   
+    }   
 
-   
+}
+*/
+
+
+
+
+@media (max-width: 379px) {    
+	
+	
+    header img {		
+     width: 25%;
+     margin-bottom:20px;        
+    }
+    .logo_name {
+        margin-left:10px;
+        font-size: 1.2em;
+    }
+    .menu {
+		margin:0px;		
+    }
+    .dropdown-menu {
+        margin: 0px;		
+    }
+    
+    .pedido {
+        margin-top:-80px; 		
+        margin-left: 72%;		
+        width: 80px;
+        height:180px;        
+    }
+
+
+    .fotter-contatos {
+        height: 260px;
+        padding:20px 0px 0px 0px;         
+        
+    }
+    .fotter-contatos ul {
+        display:block;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .developer {
+        margin-top: 13%;
+    }
+    .developer p {
+        font-size: 0.6rem;
+    }
+
+
+    .carousel-inner {       
+        height: 220px;       
+    }    
+    .carroucel img {        
+        height: 300px;
+    }
+
+    .containner-produto {
+        height: 960px;
+        width: auto;
+		padding: 5px 0px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .containner-produto .card-home {
+        width: 300px;
+        height: 200px; 
+		margin:25px 0px;
+          		
+    }  
+    .containner-produto .card-home .content {
+        margin-top: 15px;
+    }
+    .containner-produto .card-home .content p {
+        width: 160px;
+        height: 160px;
+        margin-top: 10px;
+        margin-left: 120px;
+        font-size: 1.1rem;  
+   }
+
+    .secao-main {
+        display: block;
+        height: auto;
+        padding: 10px 0px;        
+    }
+    .secao-main .descricao {
+        width: 300px;
+        height: 320px;
+        margin: 10px 0px;
+        padding: 10px;
+    } 
+    .secao-main .card {
+        width: 300px;
+		margin:10px 0px;
+               
+    }
+    .secao-main .card .box-img img {
+        width: 300px;
+        height: 400px;
+    }
+    .secao-main .card .content h3 {
+        width: 160px;
+        height: 60px;
+        margin-top: 60px;
+        margin-left: 120px ;
+        font-size: 1.2rem; 		
+    }
+    .secao-main .card .content p {
+        width: 260px;
+        height: 200px;       
+        margin-left: 5px ;
+        font-size: 1.0rem; 		
+    }
+
+
+    [data-anime="left"] {
+        transform: translate3d(3px, 0, 0);
+    }
+
+    [data-anime="right"] {
+        transform: translate3d(-3px, 0, 0);
+    }
+
+    .secao-preco {
+        background: url("../img/pr_bkgr_sm.png") no-repeat center center;
+        background-size: cover;
+        width: auto;
+        height: auto;
+        padding: 20px 0px ;
+    }
+    .secao-preco table {       
+        width: 100%;       
+    }
+    .secao-preco table th {
+        font-size: 1.8rem;
+    }
+    
+
+    .secao-sobre {  
+        min-width: 220px;
+		margin:0px;
+        padding:0px;		
+        background: url("../img/sobre_bkgr_sm.png") no-repeat center center;
+        background-size: cover;        
+    }
+    .history {
+        height: 900px;
+		padding:30px 20px;		
+    }
+    .history p {
+        font-size: 1.0em;		
+		
+    }
 
 }

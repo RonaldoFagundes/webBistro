@@ -1073,7 +1073,7 @@ td {
     .containner-produto {
         height: 960px;
         width: auto;
-		padding: 5px 0px;
+	/*	padding: 5px 0px;*/
         display: block;
         justify-content: center;
         align-items: center;
@@ -1081,7 +1081,7 @@ td {
     .containner-produto .card-home {
         width: 300px;
         height: 200px; 
-		margin:25px 0px;
+	/*	margin:25px 0px;*/
           		
     }  
     .containner-produto .card-home .content {
@@ -1096,19 +1096,21 @@ td {
    }
 
     .secao-main {
-        display: block;
         height: auto;
-        padding: 10px 0px;        
+        display: block;
+        justify-content: center;
+        align-items: center;
+       /* padding: 10px 0px;  */
     }
     .secao-main .descricao {
         width: 300px;
         height: 320px;
-        margin: 10px 0px;
+     /* margin: 10px 0px;*/
         padding: 10px;
     } 
     .secao-main .card {
         width: 300px;
-		margin:10px 0px;
+	/*	margin:10px 0px;*/
                
     }
     .secao-main .card .box-img img {

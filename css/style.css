@@ -643,7 +643,7 @@ header img {
     font-family: 'Lobster', cursive;
     font-weight: bold;
     font-size: 1.8rem;
-    color: rgb(49, 10, 10);
+    color: rgb(49, 50, 50, 0.9);
     }
 
 .secao-main .card .content p {
@@ -1073,12 +1073,13 @@ td {
     .containner-produto {
         height: 960px;
         width: auto;		
-        display: block;       
+        display: block; 
+        padding-top: 10px;      
     }
     .containner-produto .card-home {
         width: 300px;
         height: 200px;        
-		margin:25px 0px 25px 4px;          		
+		margin:25px 0px 25px 6px;          		
     }  
     .containner-produto .card-home .content {
         margin-top: 15px;
@@ -1094,17 +1095,17 @@ td {
     .secao-main {
         height: auto;
         display: block; 
-        padding: 10px 0px;       
+        padding-top: 10px ;       
     }
     .secao-main .descricao {
         width: 300px;
         height: 360px;
-        margin: 10px 0px 10px 4px;
+        margin: 10px 0px 10px 6px;
         padding: 10px;
     } 
     .secao-main .card {
         width: 300px;
-        margin: 10px 0px 10px 4px;
+        margin: 10px 0px 10px 6px;
                
     }
     .secao-main .card .box-img img {

@@ -1067,18 +1067,18 @@ td {
         height: 200px;       
     }    
     .carroucel img {        
-        height: 240px;
+        height: 200px;
     }
 
     .containner-produto {
-        height: 960px;
+        height: 1060px;
         width: auto;		
         display: block; 
         padding-top: 10px;      
     }
     .containner-produto .card-home {
         width: 300px;
-        height: 200px;        
+        height: 280px;        
 		margin:25px 0px 25px 6px;          		
     }
     .containner-produto .box-img img {
@@ -1099,7 +1099,8 @@ td {
     .secao-main {
         height: auto;
         display: block; 
-        padding-top: 10px ;       
+        padding-top: 10px ;
+        padding-bottom: 10px;       
     }
     .secao-main .descricao {
         width: 300px;

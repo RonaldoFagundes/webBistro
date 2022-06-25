@@ -643,7 +643,7 @@ header img {
     font-family: 'Lobster', cursive;
     font-weight: bold;
     font-size: 1.8rem;
-    color: rgb(49, 50, 50, 0.9);
+    color: rgba(153, 49, 35, 0.986);
     }
 
 .secao-main .card .content p {
@@ -689,9 +689,9 @@ header img {
     .secao-main .card .content h3 {
         width: 70%;
         margin-top: 20%;
-        margin-left: 40%;
+        margin-left: 30%;
         margin-bottom: 20%;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .secao-main .card .content p {      
@@ -1064,10 +1064,10 @@ td {
 
 
     .carousel-inner {       
-        height: 220px;       
+        height: 200px;       
     }    
     .carroucel img {        
-        height: 300px;
+        height: 240px;
     }
 
     .containner-produto {

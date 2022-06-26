@@ -849,6 +849,12 @@ td {
     .secao-preco table th {
         font-size: 1.4em;
     }
+    .secao-preco table tr,
+   td {    
+    font-size: 0.9em;
+    line-height: 1.6em;    
+    }
+
 }
 
 
@@ -1039,9 +1045,9 @@ td {
     
     .pedido {
         margin-top:-80px; 		
-        margin-left: 72%;		
+        margin-left: 74%;		
         width: 80px;
-        height:180px;        
+        height:170px;        
     }
 
 
@@ -1121,7 +1127,7 @@ td {
     }
     .secao-main .card .box-img img {
         width: 300px;
-        height: 360px;
+        height: 380px;
     }
     .secao-main .card .content h3 {
         width: 160px;
@@ -1157,10 +1163,13 @@ td {
         width: 90%;       
     }
     .secao-preco table th {
-        font-size: 1.8rem;
+        font-size: 1.4em;
     }
-    
-
+    .secao-preco table tr,
+    td {    
+     font-size: 0.9em;
+     line-height: 1.6em;    
+     }
     .secao-sobre {  
         min-width: 220px;
 		margin:0px;

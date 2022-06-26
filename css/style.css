@@ -1061,8 +1061,14 @@ td {
     .developer p {
         font-size: 0.6rem;
     }
-
-
+    .intru {   
+        height: 170px;  
+       }
+       .intru p {
+        font-size: 1.4em;
+        line-height: 1.6em;    
+       }
+       
     .carousel-inner {       
         height: 200px;       
     }    
@@ -1115,7 +1121,7 @@ td {
     }
     .secao-main .card .box-img img {
         width: 300px;
-        height: 400px;
+        height: 360px;
     }
     .secao-main .card .content h3 {
         width: 160px;
@@ -1148,7 +1154,7 @@ td {
         padding: 20px 0px ;
     }
     .secao-preco table {       
-        width: 100%;       
+        width: 90%;       
     }
     .secao-preco table th {
         font-size: 1.8rem;
@@ -1168,7 +1174,6 @@ td {
     }
     .history p {
         font-size: 1.0em;		
-		
     }
 
 }

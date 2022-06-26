@@ -1127,7 +1127,7 @@ td {
     }
     .secao-main .card .box-img img {
         width: 300px;
-        height: 380px;
+        height: 400px;
     }
     .secao-main .card .content h3 {
         width: 160px;
@@ -1160,7 +1160,7 @@ td {
         padding: 20px 0px ;
     }
     .secao-preco table {       
-        width: 90%;       
+        width: 94%;       
     }
     .secao-preco table th {
         font-size: 1.4em;

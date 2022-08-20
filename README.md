@@ -19,7 +19,7 @@ site:point_right:
 
 
 <div style="display:flex; justify-content: space-evenly;">
-  <img src="https://user-images.githubusercontent.com/79234840/185762074-6da8f4af-f44f-49da-add5-885556322438.gif" width="240px" height="300px"/>
+  <img src="https://user-images.githubusercontent.com/79234840/185762074-6da8f4af-f44f-49da-add5-885556322438.gif" width="220px" height="400px"/>
  </div>
 
 &nbsp;

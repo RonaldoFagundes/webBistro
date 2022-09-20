@@ -5,15 +5,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 
+/*
+*, body,  html {
+    scroll-behavior: smooth !important;
+}  
 
-* {
-    margin: 0;
-    padding: 0;
-}
+ body:focus-within,  html:focus-within {
+    scroll-behavior: smooth;
+  }  */
+
 
 html {
     scroll-behavior: smooth;
+}  
+
+* {
+    margin: 0;
+    padding: 0;    
 }
+
+
 
 h1,
 h2,
@@ -141,7 +152,7 @@ header img {
 
 
 
-.to-top {
+/* .to-top {
     width: 50px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.4);
@@ -168,7 +179,78 @@ header img {
 
 .bi-arrow-up-square {
     color: yellow;
+} */
+
+
+
+
+.to-top {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 60px;
+    height: 60px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    position: fixed;
+    bottom: 20px;
+    margin-left: 94%;
+    cursor: pointer;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+  }
+  @media screen and (min-width: 300px) and (max-width: 1000px) {
+ .to-top {
+      margin-left: 87%;
+      bottom: 180px;
+    }
+  }
+ .topEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: topEntrance;
+  }
+  @keyframes topEntrance {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+.topExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    animation-name: topExit;
+  }
+  @keyframes topExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  .bi-arrow-up-square {
+    color: yellow;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +388,7 @@ header img {
     height: 150px;
     text-align: center;
     padding: 5px 0px;
-    margin: 5px 0px;
+    margin: 5px 0px;    
 }
 
 

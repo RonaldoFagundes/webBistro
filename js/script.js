@@ -1,14 +1,70 @@
-
+/*
 const toTop = document.querySelector(".to-top");
 
-window.addEventListener("scroll",()=>{
-	if(window.pageYOffset>200){
+ window.addEventListener("scroll",()=>{
+	if(window.pageYOffset>300){
 		toTop.classList.add("active");
 	}else{
 		toTop.classList.remove("active");
 	}
 	
-});
+}); */
+
+
+
+let btn_top = document.querySelector(".to-top");
+
+
+window.addEventListener("scroll",scrollFunction);
+      
+    function scrollFunction () {
+
+        if(window.pageYOffset > 300){
+
+           if(!btn_top.classList.contains("topEntrance")){
+                             
+               btn_top.classList.remove("topExit"); 
+               btn_top.classList.add("topEntrance");  
+               btn_top.style.display="flex";
+               
+                }
+
+           
+        }else{
+
+         if(btn_top.classList.contains("topEntrance")){
+            btn_top.classList.remove("topEntrance"); 
+            btn_top.classList.add("topExit"); 
+            setTimeout(()=>{
+               btn_top.style.display="none";
+            },250);
+             
+
+          }
+
+        }
+        
+     }
+
+
+   btn_top.addEventListener("click",backToTop);
+
+    function backToTop(){
+         window.scrollTo(0,0);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -32,6 +88,8 @@ const debounce  = function (func,wait,immediate){
 
 
 
+
+
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
@@ -42,7 +100,8 @@ const animationClass = 'animate';
 
  animeScroll=()=>{
 
-     const windowTop = window.pageYOffset +((window.innerHeight*3/4));
+    const windowTop = window.pageYOffset +((window.innerHeight*3/4));
+
 
      target.forEach(function(element){
 

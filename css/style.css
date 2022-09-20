@@ -137,7 +137,7 @@ header img {
 @media (min-width: 380px) and (max-width: 700px) {
     .pedido {
         margin-left: 78%;
-        bottom: 80px;
+        bottom: 140px;
         height: 140px;
         width: 80px;
         display: flex;

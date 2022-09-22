@@ -2,11 +2,11 @@
 website frontend - html - css - bootstrap - javascript
 
 &nbsp;
-point_right:
+:point_right:
 [webBistro](https://ronaldofagundes.github.io/webBistro/)
 
 &nbsp;
-point_right:
+:point_right:
 [youtube](https://www.youtube.com/watch?v=UaJxvQpzVJs)
 
    &nbsp;

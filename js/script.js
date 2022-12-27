@@ -11,6 +11,83 @@ const toTop = document.querySelector(".to-top");
 }); */
 
 
+window.onload =  addCartEmpty;
+
+let shopCart = 0 ;
+let shopCartFull = document.querySelector(".cart-full");
+let shopCartEmpty = document.querySelector(".cart-empty");
+
+let qtdEmpty = document.querySelector(".cart-empty span");
+let qtdFull = document.querySelector(".cart-full span");
+
+//let kartQuantity = document.getElementById("cart-quantity");
+
+
+
+ function addCartEmpty(){
+
+   //shopCart = 0;      
+    
+      if(shopCart == 0){
+        
+         shopCartFull.classList.remove("cart-show");
+         shopCartEmpty.classList.add("cart-show");
+         
+        // qtdEmpty.textContent=shopCart;
+         qtdEmpty.innerHTML=shopCart;
+      }
+
+
+  
+
+
+ }
+
+
+
+addCartFull=()=>{
+
+     shopCart ++;      
+  
+
+      if(shopCart>=1){
+        
+         shopCartEmpty.classList.remove("cart-show");
+         shopCartFull.classList.add("cart-show");
+         qtdFull.innerHTML=shopCart;
+      }
+
+ }
+
+
+
+ 
+
+
+
+
+let iconWhatsapp = document.querySelector(".pedido");
+
+  shakeWhatsapp=()=>{
+ 
+   if(!iconWhatsapp.classList.contains("animateRock")){
+     
+      iconWhatsapp.classList.add("animateRock"); 
+
+     }else{
+
+      iconWhatsapp.classList.remove("animateRock"); 
+   }
+
+ }
+ 
+ setInterval(shakeWhatsapp,3000)
+
+
+
+
+
+
 
 let btn_top = document.querySelector(".to-top");
 
@@ -121,5 +198,32 @@ window.addEventListener('scroll',debounce(function(){
      animeScroll();
 },200));
 }
+
+
+
+
+
+
+window.sr = ScrollReveal({reset:true});
+
+sr.reveal('.text-1', {duration:2000});
+
+sr.reveal('.text-2', {
+	
+	rotate:{x:100, y:80, z:0},
+	duration:2000	
+	
+	});
+	
+	
+sr.reveal('.text-3', {
+	
+	rotate:{x:100, y:80, z:0},
+	duration:2000	
+	
+	});	
+
+
+
 
 

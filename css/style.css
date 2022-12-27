@@ -1397,6 +1397,8 @@ font-family: 'Open Sans', sans-serif;
     transform: translate3d(0, 0, 0);
 }
 
+
+
 @media (min-width: 380px) and (max-width: 700px) {
     [data-anime="left"] {
         transform: translate3d(15px, 0, 0);
@@ -2369,3 +2371,10 @@ td {
 
 }
 */
+
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+    color: #8B4513;
+}

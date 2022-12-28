@@ -11,6 +11,8 @@ const toTop = document.querySelector(".to-top");
 }); */
 
 
+
+/*
 window.onload =  addCartEmpty;
 
 let shopCart = 0 ;
@@ -20,7 +22,6 @@ let shopCartEmpty = document.querySelector(".cart-empty");
 let qtdEmpty = document.querySelector(".cart-empty span");
 let qtdFull = document.querySelector(".cart-full span");
 
-//let kartQuantity = document.getElementById("cart-quantity");
 
 
 
@@ -59,9 +60,15 @@ addCartFull=()=>{
 
  }
 
+*/
+
 
 
  
+
+
+
+
 
 
 

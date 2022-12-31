@@ -12,9 +12,11 @@ const toTop = document.querySelector(".to-top");
 
 
 
-/*
-window.onload =  addCartEmpty;
 
+//window.onload =  addCartEmpty;
+
+
+/*
 let shopCart = 0 ;
 let shopCartFull = document.querySelector(".cart-full");
 let shopCartEmpty = document.querySelector(".cart-empty");
@@ -25,7 +27,7 @@ let qtdFull = document.querySelector(".cart-full span");
 
 
 
- function addCartEmpty(){
+ addCartEmpty=()=>{
 
    //shopCart = 0;      
     
@@ -60,8 +62,8 @@ addCartFull=()=>{
 
  }
 
-*/
 
+*/
 
 
  

@@ -21,7 +21,7 @@
 
 
 
-<body>
+<body onload="updateCheckout()">
 
 
 
@@ -34,28 +34,46 @@
 			   ">
 
       <div class="container-fluid">
+
         <img src="img/header/logo.jpg" class="img-fluid" alt="Bistrô di totta">
         <a class="navbar-brand" href="#">
           <p class="logo_name">Bistrô di totta</p>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="z-index:2;">
+
           <ul class="navbar-nav">
+
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+              <!--
+               <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="menu">Menu</span>
               </a>
+             -->
+
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+
+                <!--
                 <li><a class="dropdown-item" href="index.html">Home</a></li>
                 <li><a class="dropdown-item" href="pudim.html">Pudim</a></li>
                 <li><a class="dropdown-item" href="cardapio.html">Cardápio</a></li>
-                <li><a class="dropdown-item" href="sobre.html">Sobre nós</a></li>
+                <li><a class="dropdown-item" href="sobre.html">Sobre nós</a></li> 
+                -->
+
               </ul>
+
             </li>
+
           </ul>
-        </div>
+        </div> 
 
       </div>
 
@@ -74,14 +92,14 @@
           </div>
   
           <div>
-            <span></span>
+            <span id="qtd-checkout"></span>
           </div>
   
          </div>
            
   
   
-        <div class="shopping cart-empty">
+        <div class="shopping cart-empty "> 
   
            <div>
             <img src="img/header/shopping-cart-empty.png" class="img-carrinho"/>
@@ -91,7 +109,7 @@
             <span></span>          
           </div> 
   
-        </div>
+        </div> 
     
        
   
@@ -120,13 +138,148 @@
 
 
 
+
+
+
+
     <div class="products-request">
+        
 
-         <h1>pagina que recebe os produtos escolhidos</h1>
+        
+       <div>
 
-         <button onclick="addCartFull()">teste</button>
+          <div class="products-request-text"> 
+            <h2>Seu Pedido</h2>
+          </div>   
+         
+            <table class="table">
+    
+              <thead>
+    
+                  <tr>
+    
+                    <th scope="col">IMG</th>
+    
+                    <th scope="col">ID</th>
+    
+                    <th scope="col text-center">Nome</th>
+    
+                    <th scope="col">Descrição</th>
+    
+                    <th scope="col">Valor</th>
+    
+                    <th scope="col">Quantidade</th>
+                  </tr>
+    
+               </thead>        
+    
+               <tbody> </tbody>
+    
+             </table>
+    
+         </div>
+    
+    
+    
+          <div >   
+    
+              <div class="carrinho-valor">
+                    <p>Total R$</p>
+              </div>
+       
+          </div> 
+    
+        
+    
+    
+    <div class="compras"> 
+       
 
-    </div>    
+      <!-- <div class="card-empty">
+
+        <a type="button" class="btn btn-outline-warning"
+         onclick="clearKart()">
+           <span> Zerar</span>
+        </a>   
+  
+       </div> -->
+
+
+       <!-- <div class="card-empty">
+
+        <a type="button" class="btn btn-outline-warning"
+        onclick="continuarComprando()" >
+           <span>continuar Comprando</span>
+        </a>   
+  
+       </div> -->
+
+
+
+
+
+    
+        <div class="card-empty">
+    
+          <a type="button" class="btn btn-outline-warning"
+             onclick="clearKart()">
+            <span> Esvaziar carrinho</span>
+         </a>
+    
+        </div>
+    
+    
+       
+    
+    
+    <div class="card-empty">
+    
+          <a type="button" class="btn btn-outline-warning"
+             onclick="continuarComprando()">
+             <span> Continuar comprando</span>
+          </a>
+    
+    
+    </div>
+    
+
+
+
+    
+         <div >
+             <a type="button" class="btn btn-outline-warning"
+                  href="">
+               <span> Pagar</span>
+             </a>
+    
+    
+             <!-- integrando com mercado pago --> 
+            <div id="cardPaymentBrick_container"></div> 
+    
+         </div>
+    
+       
+    
+     
+    
+        <div class="card-empty">
+    
+            <a type="button" class="btn btn-outline-warning" 
+              href="">
+             <span>Escolher produtos</span>      
+           </a>
+    
+        </div>
+    
+     
+    
+    </div>
+
+
+
+
+
+  </div>    
 
 
 
@@ -156,7 +309,8 @@
 
 
 
-  <footer class="fotter">
+<footer class="fotter">
+
 
 
   <div class="fotter-main">
@@ -219,9 +373,8 @@
 
     <div class="fotter-contatos">
 
-      <ul>
-
-        <p>Siga nos</p>
+      <p>Siga nos</p>
+      <ul>          
 
         <li>
           <a href="https://www.instagram.com/bistroditotta" target="_blank">
@@ -231,9 +384,14 @@
                 d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
             </svg>
           </a>&nbsp;instagram
-        </li>
+        </li> 
 
-        <p>Contatos</p>
+      </ul>
+
+
+      <p>Contatos</p>
+      <ul>     
+
       <li>      
          <a href="https://wa.me/5521993067274?text=gostaria%20de%20fazer%20um%20pedido" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp"
@@ -244,7 +402,6 @@
           </a>&nbsp;Whatsapp    
         </li> 
 
-        
         <li>
           <a href="mailto:bistroditotta@gmail.com" title="email"><svg xmlns="http://www.w3.org/2000/svg" width="20"
               height="20" fill="currentColor" class="bi bi-envelope-open" viewBox="0 0 16 16">
@@ -253,8 +410,7 @@
             </svg>
           </a>&nbsp;e-mail
         </li>
-
-
+       
         <li>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone"
             viewBox="0 0 16 16">
@@ -265,7 +421,6 @@
           <p>021-99306-7274</p>
         </li>
 
-        
       </ul>     
 
     </div>
@@ -288,8 +443,7 @@
    </div>
 
 
-
-  </footer>
+</footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -297,7 +451,7 @@
   crossorigin="anonymous"></script>
 
 <script src="js/script.js"></script>
-<script src="js/database.js"></script>
+<script src="js/funcoes.js"></script>
 
 
 </body>

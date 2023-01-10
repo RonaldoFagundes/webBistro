@@ -1560,7 +1560,12 @@ font-family: 'Open Sans', sans-serif;
             display: block;
             height: auto;        
         }
-        
+
+        .module.parallax.parallax-1 h1, 
+        .module.parallax.parallax-2 h1, 
+        .module.parallax.parallax-3 h1{
+            font-size: 52px;
+        }
             
 }
 
@@ -1621,8 +1626,6 @@ section.module:last-child{
 
 section.module h2{
     margin-bottom: 40px;
-    
-
     text-align: justify;
     font-size: 1.4em;
     /* font-family: 'Open Sans', sans-serif;*/

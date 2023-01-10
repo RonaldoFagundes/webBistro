@@ -163,7 +163,7 @@ header img {
 
 
         .shopping-cart-container {       
-            margin-top: -220px;
+            margin-top: -60px;
             margin-left: 260px;      
         }
     
@@ -345,24 +345,19 @@ header img {
 
     @keyframes tremer {
         0% {
-            margin-left: 83%;
-           
+            margin-left: 82%;           
         }
         25% {
-            margin-left: 82.7%;
-           
+            margin-left: 81.7%;           
         }
         50% {
-            margin-left: 83%;
-            
+            margin-left: 82%;            
         }
         75% {
-            margin-left: 82.7%;
-            
+            margin-left: 81.7%;            
         }
-        100% {
-            margin-left: 83%;
-           
+        100% {           
+             margin-left: 82%;           
         }
       }
 
@@ -605,7 +600,7 @@ font-family: 'Open Sans', sans-serif;
 
 .fotter-info{
     display: block;
-    margin-top: 140px;
+    margin-top: 100px;
 }
 
 
@@ -729,8 +724,8 @@ font-family: 'Open Sans', sans-serif;
     
     .fotter-main{
       height: auto;  
-      padding: 20px 0px;  
-       }
+      padding: 20px 0px;      
+     }
 
 
     .fotter-main .fotter-security{
@@ -789,11 +784,19 @@ font-family: 'Open Sans', sans-serif;
          }
 
 
-         .fotter-main .fotter-contatos li {
-            font-size: 0.9rem;                 
-    }
+         .fotter-main .fotter-contatos ul li {
+            font-size: 0.8rem;            
+          }
 
-
+          .fotter-main .fotter-contatos ul li p {
+            font-size: 0.7rem; 
+            width: 90px;
+            
+          }
+     
+          .fotter-info{        
+            margin-top: 20px;
+        }
   
 
 
@@ -1373,7 +1376,7 @@ font-family: 'Open Sans', sans-serif;
 
 
     .containner-produto .card-home{
-        width: 350px;
+        width: 360px;
         height: 350px; 
         margin-left: 1%;
         margin-right: 1%;
@@ -1500,17 +1503,26 @@ font-family: 'Open Sans', sans-serif;
 
 @media (min-width: 360px) and (max-width: 700px) {
       
+   
+    .products-request{
+       padding-left: 2px;
+       padding-right: 2px;
+       padding-bottom: 20px;
+       
+    }
 
     .products-request .table{
-       margin-left: -34px;
+       margin-left: -10px;      
      }
+
+   
         
     .products-request .compras{
         width: 98%;
         height: 300px;
         display: block;
-        padding-top: 20px;      
-    } 
+        padding-top: 20px;  
+     } 
 
     .products-request .compras .card-empty {
          margin-bottom: 20px;
@@ -1899,7 +1911,7 @@ section.module.parallax-2{
 
 
     .section-service-two .card {
-        width: 338px;
+        width: 360px;
         margin-left: 1%;
         margin-right: 1%;
         margin-top: 10px;
@@ -2026,10 +2038,10 @@ section.module.parallax-2{
 
 @media (min-width: 360px) and (max-width: 700px) {
     [data-anime="left"] {
-        transform: translate3d(15px, 0, 0);
+        transform: translate3d(10px, 0, 0);
     }
     [data-anime="right"] {
-        transform: translate3d(-15px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
     }
 }
 

@@ -164,7 +164,7 @@ header img {
 
         .shopping-cart-container {       
             margin-top: -60px;
-            margin-left: 260px;      
+            margin-left: 300px;      
         }
     
         .shopping.cart-show{
@@ -622,7 +622,7 @@ font-family: 'Open Sans', sans-serif;
 
 
 
-.foot-developer {
+.footer-developer {
     width: auto;
     height: 100px;
     
@@ -632,7 +632,7 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
-.foot-developer p {
+.footer-developer p {
     font-size: 1.0em;
     color: rgba(255, 255, 255, .20);
     font-weight: 700;
@@ -1078,7 +1078,7 @@ font-family: 'Open Sans', sans-serif;
         width: 160px;
         height: 200px;
         margin-top: -46px;        
-        margin-left: 12px;  
+        margin-left: 10px;  
      }
 
      .carousel-item .carousel-img-text.left-one{
@@ -1376,7 +1376,7 @@ font-family: 'Open Sans', sans-serif;
 
 
     .containner-produto .card-home{
-        width: 360px;
+        width: 400px;
         height: 350px; 
         margin-left: 1%;
         margin-right: 1%;
@@ -1576,7 +1576,7 @@ font-family: 'Open Sans', sans-serif;
         .module.parallax.parallax-1 h1, 
         .module.parallax.parallax-2 h1, 
         .module.parallax.parallax-3 h1{
-            font-size: 52px;
+            font-size: 46px;
         }
             
 }
@@ -1911,7 +1911,7 @@ section.module.parallax-2{
 
 
     .section-service-two .card {
-        width: 360px;
+        width: 400px;
         margin-left: 1%;
         margin-right: 1%;
         margin-top: 10px;
@@ -2036,12 +2036,12 @@ section.module.parallax-2{
 
 
 
-@media (min-width: 360px) and (max-width: 700px) {
+@media (min-width: 360px) and (max-width: 960px) {
     [data-anime="left"] {
-        transform: translate3d(10px, 0, 0);
+        transform: translate3d(5px, 0, 0);
     }
     [data-anime="right"] {
-        transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
     }
 }
 
@@ -2216,7 +2216,7 @@ section.module.parallax-2{
 
 .secao-preco table {
     height: auto;
-    width: 90%;
+    width: 98%;
     padding: 5px;
     border-collapse: separate;
     border-spacing: 2px;
@@ -2627,8 +2627,3 @@ section.module.parallax-2{
 */
 
 
-th, td {
-    border: 1px solid black;
-    padding: 5px;
-    color: #8B4513;
-}

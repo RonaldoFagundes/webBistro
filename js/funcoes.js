@@ -1,17 +1,26 @@
 
 
 function startIndex(){
-
   listProducts();
   updateIndex();
-
 }
 
 
 
 
-const urlParams = new URLSearchParams(window.location.search); 
 
+
+function startCheckbox(){
+  updateCheckout();  
+  }
+
+
+
+
+
+
+
+const urlParams = new URLSearchParams(window.location.search); 
 var  quantity = 0 ;
 
 
@@ -19,41 +28,39 @@ var  quantity = 0 ;
 
 
 
- function addProduto(){
  
-  quantity ++;
-
-  const carrinho = new Carrinho(quantity)
-  
-  window.location.href = "checkout.html?qtd="+quantity;
-  
- }
-
 
 
 
  function updateCheckout(){
 
-  const shopCartFull = document.querySelector(".cart-full");
-//  const shopCartEmpty = document.querySelector(".cart-empty");
-      
-//const qtdEmpty = document.querySelector(".cart-empty span");
+const shopCartFull = document.querySelector(".cart-full");
 const qtdFull = document.querySelector(".cart-full span");
 
 
 const urlQtd = urlParams.get('qtd');
 
-const carrinho = new Carrinho(urlQtd);
+const urlId = urlParams.get('id');
+const urlName = urlParams.get('nome');
+const urlInfo = urlParams.get('info');
+const urValor = urlParams.get('valor');
 
+
+const produto = new Produtos(urlId,urlName,urlInfo,urValor,urlQtd);
+produto.setDados();
+
+
+const carrinho = new Carrinho(urlQtd);
 quantity = carrinho.getQuantidade();
 
 
+
  if (quantity >= 0){
-
       shopCartFull.classList.add("cart-show");    
-      qtdFull.innerHTML = quantity;  
-
+      qtdFull.innerHTML = quantity; 
  }
+
+
   
 }
 
@@ -73,12 +80,9 @@ function continuarComprando(){
 function updateIndex(){
 
   const shopCartFull = document.querySelector(".cart-full");
-  const shopCartEmpty = document.querySelector(".cart-empty");
+  const shopCartEmpty = document.querySelector(".cart-empty");     
 
-      
-//  const qtdEmpty = document.querySelector(".cart-empty span");
   const qtdFull = document.querySelector(".cart-full span");
-
 
 const urlQtd = urlParams.get('qtd');
 
@@ -87,12 +91,12 @@ const carrinho = new Carrinho(urlQtd);
 quantity = carrinho.getQuantidade();
 
  if (quantity >= 1){
-
       shopCartFull.classList.add("cart-show");
       shopCartEmpty.classList.remove("cart-show"); 
-      qtdFull.innerHTML = quantity;  
-
+      qtdFull.innerHTML = quantity; 
  }
+
+
   
 }
 
@@ -128,8 +132,7 @@ quantity = carrinho.getQuantidade();
 
  listProducts=()=>{ 
 
-
-    const products = [
+     const products = [
 
         {
          img:"./img/home_pudim_m.png",
@@ -154,8 +157,8 @@ quantity = carrinho.getQuantidade();
            {
             img:"./img/home_abacaxi_m.png",
             id:"03",
-           nome:"Abacaxi",
-           info:"abacaxi com geleia aetesanal de morango",
+           nome:"Morango",
+           info:"Morango com chantilly",
            valor:17,
            estoque:5
            },
@@ -171,6 +174,9 @@ quantity = carrinho.getQuantidade();
     
     ];
       
+
+
+
 
 
         products.forEach(e => {   
@@ -201,61 +207,37 @@ quantity = carrinho.getQuantidade();
             const addBtn = document.createElement('a');
             addBtn.classList.add('btn');
             addBtn.classList.add('btn-outline-warning');
-            addBtn.classList.add('add-products');
-       
-        
-        
+            addBtn.classList.add('add-products');       
+              
         
             img.src = e.img;
             nome.innerText = e.nome;
             info.innerText = e.info;
             addBtn.innerText ="Adicionar ao carrinho"
 
+           
 
 
+            addBtn.addEventListener('click', (ex)=>{        
+              
+             var produtos = new Produtos(e.id, e.nome, e.info, e.valor);
 
-
-
-            addBtn.addEventListener('click', (ex)=>{
-             
-                 addProduto();
-
-
-
-              /*
-            const c =  new  Controller(e.id, e.nome, e.info, e.valor );
-            addProducts(c);            
-               alert(
-                "id: "+c.getId()+" Nome: "+c.getNome()+" Info:  "+c.getInfo()+" Valor: "+c.getValor()+" quantidade:  "+c.getQuantidade()
-               )
-              */
-
+             produtos.addProduto();     
                
-             }) 
+            }) 
         
 
-
-
-
-
-
-
         
-            picture.appendChild(img);
+            picture.appendChild(img);        
+            boxImg.appendChild(picture);           
         
-            boxImg.appendChild(picture);
-            
-        
-            divBtn.appendChild(addBtn);
-        
+            divBtn.appendChild(addBtn);        
             content.appendChild(nome);
             content.appendChild(info);
-            content.appendChild(divBtn); 
-            
+            content.appendChild(divBtn);             
         
             card.appendChild(boxImg);
-            card.appendChild(content);   
-          
+            card.appendChild(content);           
         
             container.appendChild(card);   
       
@@ -291,7 +273,6 @@ quantity = carrinho.getQuantidade();
          this.setQuantidade(quantidade)
       }
 
-
       setQuantidade=(quantidade)=>{
         this.quantidade = quantidade;
       }
@@ -316,18 +297,30 @@ quantity = carrinho.getQuantidade();
 
 
 
-  class Controller{
- 
-      constructor(id, nome , info, valor){
+  class Produtos{ 
+
+      constructor(id, nome , info, valor, quantity){
      
          this.setId(id);
          this.setNome(nome);
          this.setInfo(info);
-         this.setValor(valor)       
+         this.setValor(valor);
+         this.setQuantity(quantity) 
+
+         this.id = id ;
+         this.nome = nome ;
+         this.info = info ;
+         this.valor = valor ;
+
+         this.arrayProdutos=[];        
+      
       }
          
 
-
+     
+     
+    
+    
     setId=(id)=>{
       this.id = id;
     }
@@ -361,6 +354,153 @@ quantity = carrinho.getQuantidade();
  }
 
 
+setQuantity(quantity){
+    this.quantity = quantity;
+}
+
+getQuantity(){
+  return this.quantity;
+}
+
+
+
+
+getDados(){
+   let produto={}
+ 
+   /* 
+   produto.idProduto = this.id;
+   produto.nomeProduto = this.nome;
+   produto.infoProduto = this.info;
+   produto.valorProduto = this.valor;
+   produto.quantityProduto = this.qtd;
+   */
+
+   produto.idProduto = this.getId();
+   produto.nomeProduto = this.getNome();
+   produto.infoProduto = this.getInfo();
+   produto.valorProduto = this.getValor();
+   produto.quantityProduto = this.getQuantity();
+
+
+   return produto;
+}
+
+
+
+
+
+ setDados(){
+  let produto = this.getDados();
+    this.addproduto(produto)
+  //console.log(this.arrayProdutos);
+
+   this.listarProdutosAdd();
+  }
+
+
+
+  addproduto(produto){
+       this.arrayProdutos.push(produto);
+       //this.qtd++;
+  }
+
+
+   
+
+
+
+
+
+
+   addProduto(){
+ 
+    quantity ++;
+  
+    const carrinho = new Carrinho(quantity)  
+    
+  
+   /*  window.location.href =
+     "checkout.html?qtd="+quantity+"&id="+this.getId();  */
+
+     window.location.href =
+     "checkout.html?id="+this.getId()+"&nome="+this.getNome()+"&info="+this.getInfo()+"&valor="+this.getValor()+"&qtd="+quantity; 
+    
+   
+   
+   }
+  
+   
+
+
+
+
+
+
+
+  listarProdutosAdd(){   
+  
+   /* 
+   for (let i in this.arrayProdutos ){
+   this.arrayProdutos.forEach(i => { 
+
+    const tbody = document.getElementById('tbody');
+
+    const tr = document.createElement('tr');
+    const tdId = document.createElement('td');
+    const tdName = document.createElement('td');
+    const tdInfo = document.createElement('td');    
+    const tdQtd = document.createElement('td');
+    
+
+    tdId.innerText =   i.idProduto;
+    tdName.innerText = i.nomeProduto;
+    tdInfo.innerText = i.infoProduto;       
+    tdQtd.innerText = i.quantityProduto
+
+    tr.appendChild(tdId);
+    tr.appendChild(tdName);
+    tr.appendChild(tdInfo);
+    tr.appendChild(tdQtd);
+  
+    tbody.appendChild(tr); 
+
+   } )   */       
+  
+
+   let tbody = document.querySelector('#tbody');
+         
+    for (let i = 0; i < this.arrayProdutos.length; i++ ){
+
+          let tr = tbody.insertRow();
+
+          let td_id    = tr.insertCell();
+          let td_nome  = tr.insertCell();
+          let td_info  = tr.insertCell();
+          let td_valor = tr.insertCell();
+          let td_qtd   = tr.insertCell();
+
+          td_id.innerText    = this.arrayProdutos[i].idProduto;
+          td_nome.innerText  = this.arrayProdutos[i].nomeProduto;
+          td_info.innerText  = this.arrayProdutos[i].infoProduto;
+          td_valor.innerText = this.arrayProdutos[i].valorProduto;
+          td_qtd.innerText   = this.arrayProdutos[i].quantityProduto; 
+        
+
+      } 
+
+
+
+  }
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -368,20 +508,188 @@ quantity = carrinho.getQuantidade();
 
 
 
-/*   adcionar no array product um produto de cada vez 
 
-addProduct=(controller)=>{
 
-    product = [
-      'id'=controller.getId(),
-      'nome'=controller.getNome(),
-      'info'=controller.getInfo(),
-      'valor'=controller.getValor(),
-      'qtd'=1
-    ]
-}
+
+
+      
+
+
+
+
+
+
+
+
+
+   
+
+       
+
+
+
+      
+/*
+      function listar(controller){
+          
+            var  arrayProd = 
+              {
+                'id':controller.getId(),
+                'nome':controller.getNome(),
+                'info':controller.getInfo(),    
+                'quantity':controller.getQuantity(),      
+              }
+            
+           
+
+             // for (let i in arrayProd ){
+                arrayProd.forEach(i => { 
+
+                const tbody = document.getElementById('tbody');
+          
+                const tr = document.createElement('tr');
+                const tdId = document.createElement('td');
+                const tdName = document.createElement('td');
+                const tdInfo = document.createElement('td');    
+                const tdQtd = document.createElement('td');
+                
+  
+                tdId.innerText = i=id;
+                tdName.innerText = i.nome;
+                tdInfo.innerText = i.info;       
+                tdQtd.innerText = i.quantity
+      
+                tr.appendChild(tdId);
+                tr.appendChild(tdName);
+                tr.appendChild(tdInfo);
+                tr.appendChild(tdQtd);
+              
+                tbody.appendChild(tr); 
+      
+               })           
+
+        
+    }
+*/
+
+
+
+
+       
+
+   
+
+
+
+      
+
+    
+
+   
+    /*
+     function addList(controller){      
+     
+         if(controller.getQuantity()==1){
+
+        //  console.log(" 1º produto "+controller.getId())
+
+          controller.setId(
+            [
+             id=controller.getId(),
+             nome=controller.getNome(),
+             info=controller.getInfo(),
+             quantity=1
+            ]
+         ) 
+
+             }else{
+
+          //    console.log(" 2º produto "+controller.getId())  
+              
+              controller.setId(
+                [
+                 id=controller.getId(),
+                 quantity=controller.getQuantity()
+                
+                ]
+              ) 
+             }
+                  
+
+            // console.log(controller.getId()[1]) ;
+
+             console.log(controller.getId()) ;             
+  }
 
 */
+
+
+  
+       
+
+
+
+        
+
+
+
+
+     
+
+          
+
+
+        /*
+         prodChosse.forEach(i => { 
+        
+          for (let i in prodChosse ){        
+
+            const tbody = document.getElementById('tbody');
+      
+            const tr = document.createElement('tr');
+            const tdId = document.createElement('td');
+            const tdName = document.createElement('td');
+            const tdInfo = document.createElement('td');    
+            const tdQtd = document.createElement('td');
+            
+          
+            tdId.innerText = i=id;
+            tdName.innerText = i=nome;
+            tdInfo.innerText = i=info;       
+            tdQtd.innerText = i=quantity
+
+            
+                tr.appendChild(tdId);
+                tr.appendChild(tdName);
+                tr.appendChild(tdInfo);
+                tr.appendChild(tdQtd);
+              
+                tbody.appendChild(tr);  
+           
+         }
+        */
+
+         
+
+
+
+
+
+
+
+      
+                             
+              
+             
+           
+           
+
+
+
+
+
+   
+
 
 
 

@@ -21,7 +21,7 @@
 
 
 
-<body onload="updateCheckout()">
+<body onload="startCheckbox()">
 
 
 
@@ -132,7 +132,7 @@
 
 
 
-<section class="secao-main">
+<section class="secao-main-checkout">
 
 
 
@@ -144,54 +144,50 @@
 
     <div class="products-request">
         
-
-        
-       <div>
+       
 
           <div class="products-request-text"> 
-            <h2>Seu Pedido</h2>
-          </div>   
-         
-            <table class="table">
+              <h2>Seu Pedido</h2>
+          </div>         
+
+          <table class="table">
+
+            <thead>
     
-              <thead>
+                <tr>
     
-                  <tr>
+                 <!-- <th scope="col">IMG</th> --> 
     
-                    <th scope="col">IMG</th>
+                  <th scope="col">ID</th>
     
-                    <th scope="col">ID</th>
+                  <th scope="col text-center">Nome</th>
     
-                    <th scope="col text-center">Nome</th>
+                  <th scope="col">Descrição</th>
     
-                    <th scope="col">Descrição</th>
+                  <th scope="col">Valor</th>
     
-                    <th scope="col">Valor</th>
+                   <th scope="col">Quantidade</th>
+                </tr>
     
-                    <th scope="col">Quantidade</th>
-                  </tr>
+             </thead>        
     
-               </thead>        
+               <tbody id="tbody"> </tbody>
     
-               <tbody> </tbody>
-    
-             </table>
-    
-         </div>
-    
-    
-    
-          <div >   
-    
-              <div class="carrinho-valor">
+           </table>   
+
+                  
+            <div class="carrinho-valor">
                     <p>Total R$</p>
-              </div>
+            </div>
        
-          </div> 
-    
-        
     
     
+      
+    
+    
+
+
+
     <div class="compras"> 
        
 
@@ -232,7 +228,7 @@
        
     
     
-    <div class="card-empty">
+       <div class="card-empty">
     
           <a type="button" class="btn btn-outline-warning"
              onclick="continuarComprando()">
@@ -240,13 +236,13 @@
           </a>
     
     
-    </div>
+       </div>
     
 
 
 
     
-         <div >
+        <div>
              <a type="button" class="btn btn-outline-warning"
                   href="">
                <span> Pagar</span>
@@ -264,8 +260,7 @@
     
         <div class="card-empty">
     
-            <a type="button" class="btn btn-outline-warning" 
-              href="">
+            <a type="button" class="btn btn-outline-warning">
              <span>Escolher produtos</span>      
            </a>
     
@@ -450,7 +445,7 @@
   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
   crossorigin="anonymous"></script>
 
-<script src="js/script.js"></script>
+
 <script src="js/funcoes.js"></script>
 
 

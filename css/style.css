@@ -566,9 +566,9 @@ font-family: 'Open Sans', sans-serif;
 
 
 .fotter-contatos  {
-    width: 30%;
-    height: 340px;
-    padding: 20px;
+    width: 220px;
+    height:500px;
+    padding-top: 18px;
     
     /* background-color: rgba(39, 69, 19, 0.7);
     background-image: linear-gradient(to top, transparent, rgba(139, 60, 18, 0.8));
@@ -576,11 +576,26 @@ font-family: 'Open Sans', sans-serif;
     flex-wrap: wrap; */
 }
 
+.rede-sociais{ 
+    width: auto;
+    height: 120px;
+    display: block; 
+  }
+  
+  
+  .rede-contatos{
+    width:auto;
+    height: 280px;
+    display: block; 
+    margin-top: 20px;
+  }
+
+
 .fotter-contatos ul {
-    display: block;
-    justify-content: space-between;
+    display: block;    
     cursor: pointer;
 }
+
 
 .fotter-contatos p{
      font-family: 'Open Sans', sans-serif;
@@ -772,7 +787,8 @@ font-family: 'Open Sans', sans-serif;
 
 
          .fotter-main .fotter-contatos  {
-               height: 410px;
+            height: 410px;
+            width: 80px;
          }
 
          .fotter-main .fotter-contatos ul {

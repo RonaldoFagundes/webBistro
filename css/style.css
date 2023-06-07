@@ -1093,7 +1093,7 @@ font-family: 'Open Sans', sans-serif;
     .carousel-item .carousel-img-one{
         width: 160px;
         height: 200px;
-        margin-top: -26px;        
+        margin-top: -36px;        
         margin-left: 10px;  
      }
 
@@ -1105,7 +1105,7 @@ font-family: 'Open Sans', sans-serif;
     }
 
     .carousel-item .carousel-img-text.right-one{  
-    margin-top: 140px;
+    margin-top: 120px;
     margin-left: 80px; 
     font-size: 1.4em;
     }
@@ -1116,7 +1116,7 @@ font-family: 'Open Sans', sans-serif;
         width: 160px;
         height: 200px;
         margin-top: 16px;
-        margin-left: 210px;        
+        margin-left: 230px;        
     }
 
     .carousel-item .carousel-img-text.left-two{
@@ -1127,7 +1127,7 @@ font-family: 'Open Sans', sans-serif;
 
     .carousel-item .carousel-img-text.right-two{
         margin-top: 44px;        
-        margin-left: 22px;   
+        margin-left: 220px;   
         font-size: 1.4em;        
     }
 
@@ -1143,7 +1143,7 @@ font-family: 'Open Sans', sans-serif;
 
     .carousel-item .carousel-img-text.left-three{
         margin-top: 30px;
-        margin-left: 144px;
+        margin-left: 148px;
         font-size: 1.4em;
     }    
 

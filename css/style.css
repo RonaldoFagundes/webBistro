@@ -1120,14 +1120,14 @@ font-family: 'Open Sans', sans-serif;
     }
 
     .carousel-item .carousel-img-text.left-two{
-        margin-top: 18px;        
-        margin-left: 22px;   
+        margin-top: 22px;        
+        margin-left: 28px;   
         font-size: 1.4em;
     }    
 
     .carousel-item .carousel-img-text.right-two{
-        margin-top: 44px;        
-        margin-left: 220px;   
+        margin-top: 48px;        
+        margin-left: 40px;   
         font-size: 1.4em;        
     }
 
@@ -1143,13 +1143,13 @@ font-family: 'Open Sans', sans-serif;
 
     .carousel-item .carousel-img-text.left-three{
         margin-top: 30px;
-        margin-left: 148px;
+        margin-left: 146px;
         font-size: 1.4em;
     }    
 
     .carousel-item .carousel-img-text.right-three{
       margin-top: 120px;
-      margin-left: 158px; 
+      margin-left: 166px; 
       font-size: 1.4em;        
     }
 

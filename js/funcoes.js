@@ -1,8 +1,9 @@
 
 
 function startIndex(){
-  listProducts();
-  updateIndex();
+ listProducts();
+ updateIndex();
+
 }
 
 
@@ -45,8 +46,11 @@ const urlName = urlParams.get('nome');
 const urlInfo = urlParams.get('info');
 const urValor = urlParams.get('valor');
 
+const urlImg = urlParams.get('img');
 
-const produto = new Produtos(urlId,urlName,urlInfo,urValor,urlQtd);
+console.log(urlImg)
+
+const produto = new Produtos(urlImg, urlId, urlName, urlInfo, urValor, urlQtd);
 produto.setDados();
 
 
@@ -113,49 +117,32 @@ quantity = carrinho.getQuantidade();
 
 
 
-
-
-
-    
-  
-
-    
-
-   
-     
-
-
-
-
-
-
-
  listProducts=()=>{ 
 
      const products = [
 
         {
-         img:"./img/home_pudim_m.png",
+         img:"img/home-item-card/banoffee.png",
          id:"01",
-         nome:"Pudim Gostoso",
-         info:"pudim no pote de ninho com geleia aetesanal de morango",
+         nome:"Banoffe",
+         info:"Sobremesa de banana deliciosa",
          valor:12,
          estoque:5
          },
          
         
           {
-            img:"./img/home_bombom_m.png",
+            img:"img/home-item-card/bolo.png",
             id:"02",
-           nome:"Bombom",
-           info:"pudim no pote de ninho com geleia aetesanal de morango",
+           nome:"Bolo",
+           info:"Bolo de chocolate e chantilly",
            valor:12,
            estoque:5
            },
          
     
            {
-            img:"./img/home_abacaxi_m.png",
+            img:"img/home-item-card/banoffee.png",
             id:"03",
            nome:"Morango",
            info:"Morango com chantilly",
@@ -164,7 +151,7 @@ quantity = carrinho.getQuantidade();
            },
     
            {
-            img:"./img/home_banoffee_m.png",
+            img:"img/home-item-card/banoffee.png",
             id:"04",
            nome:"Abacaxi",
            info:"abacaxi com geleia aetesanal de morango",
@@ -175,8 +162,7 @@ quantity = carrinho.getQuantidade();
     ];
       
 
-
-
+    console.log(products);
 
 
         products.forEach(e => {   
@@ -216,16 +202,22 @@ quantity = carrinho.getQuantidade();
             addBtn.innerText ="Adicionar ao carrinho"
 
            
+           // console.log(e.img)
 
 
-            addBtn.addEventListener('click', (ex)=>{        
+            addBtn.addEventListener('click', (ex)=>{  
               
-             var produtos = new Produtos(e.id, e.nome, e.info, e.valor);
+                           
+             var produtos = new Produtos(e.img, e.id, e.nome, e.info, e.valor);
 
-             produtos.addProduto();     
+             produtos.addProduto(); 
+             
+            
                
             }) 
         
+
+
 
         
             picture.appendChild(img);        
@@ -247,23 +239,6 @@ quantity = carrinho.getQuantidade();
    }     
    
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  
@@ -288,25 +263,18 @@ quantity = carrinho.getQuantidade();
 
 
 
-
-
-
-
-
-
-
-
-
   class Produtos{ 
 
-      constructor(id, nome , info, valor, quantity){
+      constructor(img, id, nome , info, valor, quantity){
      
+         this.setImg(img);
          this.setId(id);
          this.setNome(nome);
          this.setInfo(info);
          this.setValor(valor);
          this.setQuantity(quantity) 
 
+         this.img = img ;
          this.id = id ;
          this.nome = nome ;
          this.info = info ;
@@ -321,13 +289,25 @@ quantity = carrinho.getQuantidade();
      
     
     
-    setId=(id)=>{
-      this.id = id;
+    setImg=(img)=>{
+      this.img = img;
     }
 
-    getId=()=>{
-      return this.id;
+    getImg=()=>{
+      return this.img;
    }
+
+
+
+   setId=(id)=>{
+    this.id = id;
+  }
+
+  getId=()=>{
+    return this.id;
+ }
+
+
 
    setNome=(nome)=>{
     this.nome = nome;
@@ -376,6 +356,7 @@ getDados(){
    produto.quantityProduto = this.qtd;
    */
 
+   produto.imgProduto = this.getImg();
    produto.idProduto = this.getId();
    produto.nomeProduto = this.getNome();
    produto.infoProduto = this.getInfo();
@@ -392,8 +373,10 @@ getDados(){
 
  setDados(){
   let produto = this.getDados();
+
     this.addproduto(produto)
-  //console.log(this.arrayProdutos);
+
+    
 
    this.listarProdutosAdd();
   }
@@ -401,7 +384,10 @@ getDados(){
 
 
   addproduto(produto){
+    
        this.arrayProdutos.push(produto);
+
+       console.log(" id produto "+produto.idProduto+" array "+this.arrayProdutos);
        //this.qtd++;
   }
 
@@ -413,21 +399,18 @@ getDados(){
 
 
 
-   addProduto(){
+   addProduto(){  
  
     quantity ++;
   
-    const carrinho = new Carrinho(quantity)  
-    
+    const carrinho = new Carrinho(quantity)      
   
    /*  window.location.href =
      "checkout.html?qtd="+quantity+"&id="+this.getId();  */
 
      window.location.href =
-     "checkout.html?id="+this.getId()+"&nome="+this.getNome()+"&info="+this.getInfo()+"&valor="+this.getValor()+"&qtd="+quantity; 
-    
-   
-   
+     "checkout.html?id="+this.getId()+"&img="+this.getImg()+"&nome="+this.getNome()+"&info="+this.getInfo()+"&valor="+this.getValor()+"&qtd="+quantity; 
+         
    }
   
    
@@ -472,21 +455,29 @@ getDados(){
          
     for (let i = 0; i < this.arrayProdutos.length; i++ ){
 
+      console.log(" tamanho do array "+this.arrayProdutos.length)
+
           let tr = tbody.insertRow();
 
+          let td_img   = tr.insertCell();
           let td_id    = tr.insertCell();
           let td_nome  = tr.insertCell();
           let td_info  = tr.insertCell();
           let td_valor = tr.insertCell();
           let td_qtd   = tr.insertCell();
+         
 
+          let img = new Image(80, 80); 
+          img.src = this.arrayProdutos[i].imgProduto;
+
+          td_img.appendChild(img);
           td_id.innerText    = this.arrayProdutos[i].idProduto;
           td_nome.innerText  = this.arrayProdutos[i].nomeProduto;
           td_info.innerText  = this.arrayProdutos[i].infoProduto;
           td_valor.innerText = this.arrayProdutos[i].valorProduto;
           td_qtd.innerText   = this.arrayProdutos[i].quantityProduto; 
-        
 
+         
       } 
 
 

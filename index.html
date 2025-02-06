@@ -19,9 +19,9 @@
 
 </head>
 
+<!-- onload="createCardProducts()" -->
 
-
-<body onload="startIndex()">
+<body >
 
 
   <header>
@@ -300,6 +300,25 @@
 
 
 
+    <section class="modal-car-shop">
+
+  
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">IMG</th>
+            <th scope="col text-center">Nome</th>
+            <th scope="col">Valor R$</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Total R$</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"> </tbody>
+      </table>
+
+
+    </section>
+
 
 
 
@@ -495,6 +514,11 @@
 
 
 
+  
+
+
+
+
   </main>
 
   
@@ -682,8 +706,12 @@
 
   <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
+  
   <script src="js/script.js"></script>
-  <script src="js/funcoes.js"></script>
+  <script src="js/elements.js" type="module" charset="UTF-8"></script>
+  <script src="js/service.js"></script>
+
+  <!-- <script src="js/funcoes.js"></script> -->
 
 
 

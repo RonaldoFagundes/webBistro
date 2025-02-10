@@ -1340,17 +1340,39 @@ font-family: 'Open Sans', sans-serif;
 }
 
 
+
+.hide-shop-car-modal{
+    display: none;
+}
+
+
 .modal-car-shop{
-    width: 'auto';
+    width: 800px;
     height: auto;
     background-color: rgba(255, 255, 223, 0.7);
     background-image: linear-gradient(to top, transparent, rgba(251, 195, 95, 0.9));
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
     padding: 20px; 
+
+    position:fixed; 
+    top: 0;
+    margin-top: 80px;
+    right:0;
+    border-radius: 10px;
+    z-index: 5;  
 }
+
+
 
 .modal-car-shop th{
     text-align: center;
+}
+
+
+.modal-car-shop .content-btn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 .modal-car-shop .car-total{
@@ -1361,6 +1383,13 @@ font-family: 'Open Sans', sans-serif;
     font-family: 'Open Sans', sans-serif;
     text-transform: capitalize;   
 }
+
+.modal-car-shop .btn{
+    color: rgba(155, 05, 10, 0.8); 
+    font-weight: bold;    
+}
+
+
 
 
 
@@ -1377,7 +1406,50 @@ font-family: 'Open Sans', sans-serif;
         height: 350px; 
         margin-left: 1%;
         margin-right: 1%;
-     }    
+     }  
+     
+     
+
+
+     .modal-car-shop{
+        width:auto;
+        height: auto;
+        padding: 10px;       
+        margin-top: 144px;
+        z-index: 50;
+    }
+
+
+    .modal-car-shop .content-btn{
+        flex-wrap: wrap;     
+    }
+
+    .modal-car-shop .btn{
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+
+
+    .modal-car-shop .car-total{
+        font-size: 1.2rem;;
+    }
+    
+
+    .modal-car-shop th{
+        font-size: 0.8rem;
+    }
+
+
+    .modal-car-shop .table{
+        width:400px;
+        height: auto;
+    }
+
+    tbody{
+        font-size: 0.8rem;
+
+    }
 
 
 }

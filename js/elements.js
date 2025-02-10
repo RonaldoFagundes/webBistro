@@ -4,8 +4,33 @@ import * as products from './model.js';
 
 var list = products.list();
 
+
 var total_car = 0;
 var qtd_car = 0;
+
+
+var produtos = new Array();
+
+
+
+function updateShopCar(qtd) {
+
+const shopCartFull  = document.querySelector(".cart-full");
+const shopCartEmpty = document.querySelector(".cart-empty");
+const qtdFull = document.querySelector(".cart-full span");
+
+
+if (qtd >= 1) {
+  shopCartFull.classList.add("cart-show");
+  shopCartEmpty.classList.remove("cart-show");
+  qtdFull.innerHTML = qtd;
+}
+
+}
+
+
+
+
 
 
 list.map((item, index) => {
@@ -32,6 +57,7 @@ list.map((item, index) => {
   const price = document.createElement('p');
 
   const qtd = document.createElement('input');
+  qtd.classList.add('input-qtd');
 
   const divBtnShop = document.createElement('div');
   divBtnShop.classList.add('btn-shop');
@@ -71,9 +97,16 @@ list.map((item, index) => {
   container.appendChild(card);
 
 
+
+
+
+
+
   btnShop.addEventListener('click', (ex) => {
 
-    const modal = document.querySelector('.modal-car-shop');
+
+   const modal = document.querySelector('.modal-car-shop');
+         modal.classList.remove("hide-shop-car-modal");
 
     let tr = tbody.insertRow();
 
@@ -118,30 +151,149 @@ list.map((item, index) => {
 
     total_car = sum_total;
     qtd_car = sum_qtd;
+    
+    updateShopCar(sum_qtd);
+
+    produtos.push({
+      name:item.nome,
+      qtd : qtd.value,
+      sutotal: sub_total,
+      qtdt:sum_qtd,
+      total:sum_total
+    });
 
   })
 })
 
 
-const m = document.querySelector('.modal-car-shop');
-const btnSho = document.createElement('a');
-btnSho.classList.add('btn');
-btnSho.classList.add('btn-outline-warning');
-btnSho.classList.add('shop-car');
 
-btnSho.innerText = "Calcular";
+
+
+
+        
+
+
+const modalCarShop = document.querySelector('.modal-car-shop');
+
+const contentBtn  = document.createElement('div');
+contentBtn.classList.add('content-btn')
+
+const btnCalc = document.createElement('a');
+btnCalc.classList.add('btn');
+btnCalc.classList.add('btn-outline-warning');
+btnCalc.classList.add('shop-car');
+btnCalc.innerText = "Calcular";
+
+
+const btnOder = document.createElement('a');
+btnOder.classList.add('btn');
+btnOder.classList.add('btn-outline-warning');
+btnOder.classList.add('shop-car');
+btnOder.innerText = "Finalizar Pedido";
+
+
+const btnBuying = document.createElement('a');
+btnBuying.classList.add('btn');
+btnBuying.classList.add('btn-outline-warning');
+btnBuying.classList.add('shop-car');
+btnBuying.innerText = "Continuar Comprando";
+
+const btnEmpty = document.createElement('a');
+btnEmpty.classList.add('btn');
+btnEmpty.classList.add('btn-outline-warning');
+btnEmpty.classList.add('shop-car');
+btnEmpty.innerText = "Esvaziar Carrinho";
+
 
 const car_total = document.createElement('p');
 car_total.classList.add('car-total');
-m.appendChild(btnSho)
 
-btnSho.addEventListener('click', (ex) => {
 
+
+
+
+contentBtn.appendChild(btnCalc)
+contentBtn.appendChild(btnOder)
+contentBtn.appendChild(btnBuying)
+contentBtn.appendChild(btnEmpty)
+
+modalCarShop.appendChild(contentBtn)
+
+
+
+
+
+
+
+
+
+btnCalc.addEventListener('click', (ex) => {
   car_total.innerText = " total de items " + qtd_car + " valor total R$ " + total_car.toFixed(2);
+  modalCarShop.appendChild(car_total)
+})
 
-  m.appendChild(car_total)
+
+
+btnBuying.addEventListener('click', (ex) => {
+  modalCarShop.classList.add("hide-shop-car-modal");
+  car_total.innerText = ""; 
+})
+
+
+
+btnEmpty.addEventListener('click', (ex) => {
+  window.location.reload(true); 
+  updateShopCar(0);
+})
+
+
+
+
+
+
+
+btnOder.addEventListener('click', (ex) => {
+  
+     
+  /*
+     for(let i =0; i<produtos.length; i++){
+       
+       console.log(
+        " encaminhar o pedido para o whatsap "+
+        " nome "+produtos[i].name+
+        " qtd  "+produtos[i].qtd+
+        " subtotal "+produtos[i].sutotal+
+        " qtd total "+produtos[i].qtdt+
+        " valor total "+produtos[i].total      
+      )
+     }
+    */
+
+
+   
+     alert(" voce receberá a chave pix pelo WhatsApp ")
+
+     let pedido = []; 
+     
+     let valorTotal = 0 ;
+   
+     for(let i =0; i<produtos.length; i++){ 
+  
+      pedido.push(" Produto "+produtos[i].name+" quantidade  "+produtos[i].qtd)
+       
+      valorTotal = produtos[i].total;
+     }
+  
+    
+     var oder = JSON.stringify(pedido);   
+  
+     console.log(oder+" valor a receber "+valorTotal);
+
+    // window.open('https://wa.me/5521993067274?text=pedido=%20'+oder+'%20Total R$%20'+total.toFixed(2), '_blank');
+
 
 })
+
 
 
 
